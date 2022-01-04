@@ -4,10 +4,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>尋書</title>
     <link rel="stylesheet" href="https://necolas.github.io/normalize.css/">
     <link rel="stylesheet" href="css/change.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon">
 </head>
 <body>
     <div class="contain">
@@ -44,6 +45,48 @@
         <article>
             <div class="container A_contain">
                 <div class="row">
+                    <div class="d-block d-xs-block col-xs-12 d-sm-none sideMenu" >
+                        <div class="d-inline-flex A_sidemenu_all" style="display:none" id="mySidebar">
+                            <select class="A_side_l_select">
+                                <option value="">書況</option>
+                                <option value="">類別</option>
+                                <option value="">類別</option>
+                                <option value="">類別</option>
+                                <option value="">類別</option>  
+                            </select>
+                            <select class="A_side_l_select">
+                                <option value="">價格</option>
+                                <option value="">100元以下</option>
+                                <option value="">100元~500元</option>
+                                <option value="">500元~1000元</option>
+                                <option value="">1000元~1500元</option>
+                                <option value="">1500元~2000元</option>
+                                <option value="">2000元以上</option>
+                            </select>  
+                            <div class="A_side_l_input">
+                                <input value="關鍵字" class="A_side_l_i">
+                            </div>   
+                            <div class="A_side_l_p">
+                                <p class="A_side_l_p_textB">
+                                    搜尋
+                                </p>
+                            </div>                              
+                        </div>
+                        <div>
+                            <div class="w3-teal ">
+                                <button class="bar-item_op" onclick="w3_open()" id="bar-item_op">
+                                    <img src="./img/A_sidebar_op_img.png" alt="op">
+                                </button>
+                            </div>
+                            <div class="w3-teal">
+                                <button onclick="w3_close()" class="bar-item_cl" id="bar-item_cl" style="display:none">
+                                    <img src="./img/A_sidebar_cl_img.png" alt="op">
+                                </button>
+
+                            </div>  
+
+                        </div>
+                    </div>
                     <div class="d-none d-sm-none d-md-block col-md-12 d-xl-block col-xl-12 justify-content-between A_nav">
                         <div class="d-inline-flex  A_nav_left">
                             <select class="A_nav_l_select">
@@ -150,16 +193,16 @@
 
                         <div class="d-block d-xs-block col-xs-12 d-md-none d-flex flex-row d-flex justify-content-evenly A_center_main_xs_banner">
                             <div class="A_center_main_xs_banner0">
-                                <input type="button" value="最熱銷" onclick="location.href='change.html'"
+                                <input type="button" value="最熱銷" onclick="myFunction()" id="myclick"
                                 class="A_center_main_xs_banner_btn0">
                             </div>
                             <div class="A_center_main_xs_banner1">
-                                <input type="button" value="新 舊" onclick="location.href='change.html'"
-                                class="A_center_main_xs_banner_btn0">
+                                <input type="button" value="新 舊" 
+                                onclick="myFunction2()" id="myclick2" class="A_center_main_xs_banner_btn0">
                             </div>
                             <div class="A_center_main_xs_banner2">
-                                <input type="button" value="價格" onclick="location.href='change.html'"
-                                class="A_center_main_xs_banner_btn0">
+                                <input type="button" value="價格" 
+                                onclick="myFunction3()" id="myclick3" class="A_center_main_xs_banner_btn0">
                             </div>
                         </div>    
 
@@ -264,13 +307,15 @@
                             <div class="row d-flex justify-content-evenly">
                                 <div class="col-md-4 A_center_main_goods_md">
                                     <div class="A_center_main_goods_img">
-                                        <img src="img/A_center_main_goods_A1.png" alt="goods_A">
+                                        <a href="./detail.html">
+                                            <img src="./img/A_product_xs.png" alt="goods_A">
+                                        </a>   
                                     </div>
                                     <div class="A_center_main_goods_text">
-                                        <p class="text-nowrap A_center_main_goods_textc">守護甜心 </p>
+                                        <p class="text-nowrap A_center_main_goods_textc">微積分</p>
                                         <p class="text-nowrap A_center_main_goods_textd">書況 : 良好</p>
                                         <p class="text-nowrap A_center_main_goods_textd">賣家名稱 : 百師兄</p>
-                                        <p class="text-nowrap A_center_main_goods_textd">二手價 : 80元</p>
+                                        <p class="text-nowrap A_center_main_goods_textd">二手價 : 270元</p>
                                     </div>
                                 </div>
                                 <div class="col-md-4 A_center_main_goods_md2">
@@ -379,15 +424,17 @@
                                 <hr class="A_center_main_goods_xs_hr" style="width:90%;">
                                 <div class="A_center_main_goods_xs">
                                     <div class="A_center_main_goods_img">
-                                        <img src="img/A_center_main_goods_A2.png" alt="goods_A">
+                                        <a href="./detail.html">
+                                            <img src="./img/A_product_xs.png" alt="goods_A">
+                                        </a> 
                                     </div>
                                     <div class="A_center_main_goods_text">
-                                        <p class="A_center_main_goods_textc">守護甜心 </p>
+                                        <p class="A_center_main_goods_textc">微積分 </p>
                                         <p class="A_center_main_goods_textd">書況 : 良好</p>
                                         <p class="A_center_main_goods_textd">賣家名稱 : 百師兄</p>
                                     </div>
                                     <div class="A_center_main_goods_text_r">
-                                        <p class="text-nowrap A_center_main_goods_texte">二手價 : 80元
+                                        <p class="text-nowrap A_center_main_goods_texte">二手價 : 270元
                                         </p>
                                         <div class="A_center_main_xs_btn">
                                             <input type="button" value="加入購物車" onclick="location.href='change.html'"
@@ -630,18 +677,6 @@
         </footer>
     </div>
 
-    <script>
-        function w3_open() {
-          document.getElementById("mySidebar").style.display = "block";
-          document.getElementById("bar-item_op").style.display = "none";
-          document.getElementById("bar-item_cl").style.display = "block";
-        }
-        
-        function w3_close() {
-          document.getElementById("mySidebar").style.display = "none";
-          document.getElementById("bar-item_op").style.display = "block";
-          document.getElementById("bar-item_cl").style.display = "none";
-        }
-        </script>
+    <script src="js/jquery.js"></script>
 </body>
 </html>
