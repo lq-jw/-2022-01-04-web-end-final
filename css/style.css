@@ -72,10 +72,14 @@ article{
 }
 .A_imgA:hover{
     cursor: pointer;
+    transform: scale(1.2, 1.2);
+    transition: all 0.3s ease-out;
 }
 .A_imgB:hover{
     cursor: pointer;
     opacity: 3;
+    transform: scale(1.2, 1.2);
+    transition: all 0.3s ease-out;
 }
 .A_imgA_m{
     background-color: #D9D9D9;
@@ -106,6 +110,14 @@ article{
     border-radius: 10px;
     font-size: 18px;
     background-color: #FFF3D6;
+}
+.A_img_btn_btn:hover{
+    transform: scale(1.1, 1.1);
+    transition: all 0.3s ease-out;
+}
+.A_img_btn_btn_x:hover{
+    transform: scale(1.1, 1.1);
+    transition: all 0.3s ease-out;
 }
 .A_imgA_space{
     height: 20px;
